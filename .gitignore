@@ -1,0 +1,38 @@
+# Ignore Visual Studio build results and
+# other generated files.
+.vs/
+[Dd]ebug/
+[Rr]elease/
+*.obj
+*.exe
+*.pdb
+*.user
+*.aps
+*.bsc
+*.manifest
+*.resharper
+*.dbmdl
+*.suo
+*.njsproj
+*.vssettings
+*.vssscc
+*.vspcc
+_UpgradeReport_Files/
+Backup*/
+ClientBin/
+*.ctsym
+*.pfx
+*.snk
+*.unlock
+*.templatekey
+*.vsevenv
+
+# Ignore NuGet packages
+*.nupkg
+# added by NuGet
+.nuget/
+nuget.exe
+nuget.lock
+
+# Ignore the App.config file containing sensitive keys
+App.config

@@ -1,0 +1,115 @@
+<dotnetnuke type="Package" version="5.0">
+	<packages>
+		<package name="Dnn_PookieBears_HelloWorld" type="Module" version="00.00.01">
+			<friendlyName>Dnn_PookieBears_HelloWorld</friendlyName>
+			<description>Dnn_PookieBears_HelloWorld</description>
+			<iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+			<owner>
+				<name>PookieBears</name>
+				<organization>PookieBears</organization>
+				<url>http://www.dnndev.me:80</url>
+				<email>bendi0327@gmail.com</email>
+			</owner>
+			<license src="License.txt"></license>
+			<releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+			<dependencies>
+				<dependency type="CoreVersion">09.08.00</dependency>
+			</dependencies>
+
+			<components>
+				<!-- SQL adatprovider telepítő/eltávolító script -->
+				<component type="Script">
+					<scripts>
+						<basePath>DesktopModules\MVC\Dnn_PookieBears_HelloWorld</basePath>
+						<script type="Install">
+							<path>Providers\DataProviders\SqlDataProvider</path>
+							<name>00.00.01.SqlDataProvider</name>
+							<version>00.00.01</version>
+						</script>
+						<script type="UnInstall">
+							<path>Providers\DataProviders\SqlDataProvider</path>
+							<name>Uninstall.SqlDataProvider</name>
+							<version>00.00.01</version>
+						</script>
+					</scripts>
+				</component>
+
+				<!-- Modul erőforrás fájlok (CSV, képek, stb.) -->
+				<component type="ResourceFile">
+					<resourceFiles>
+						<basePath>DesktopModules/Dnn_PookieBears_HelloWorld/Resources</basePath>
+						<resourceFile>
+							<name>possible_battle_filters.csv</name>
+						</resourceFile>
+					</resourceFiles>
+				</component>
+
+				<!-- A modul definíciója és nézetei -->
+				<component type="Module">
+					<desktopModule>
+						<moduleName>Dnn_PookieBears_HelloWorld</moduleName>
+						<foldername>Dnn_PookieBears_HelloWorld</foldername>
+						<businessControllerClass>PookieBears.Dnn.Dnn_PookieBears_HelloWorld.Components.FeatureController</businessControllerClass>
+						<supportedFeatures />
+						<moduleDefinitions>
+							<moduleDefinition>
+								<friendlyName>Dnn_PookieBears_HelloWorld</friendlyName>
+								<defaultCacheTime>0</defaultCacheTime>
+								<moduleControls>
+									<!-- Fő nézet (Index) -->
+									<moduleControl>
+										<controlKey />
+										<controlSrc>PookieBears.Dnn.Dnn_PookieBears_HelloWorld.Controllers/Item/Index.mvc</controlSrc>
+										<supportPartialRendering>False</supportPartialRendering>
+										<controlTitle />
+										<controlType>View</controlType>
+										<viewOrder>0</viewOrder>
+									</moduleControl>
+									<!-- Quiz nézet (ha használjuk) -->
+									<moduleControl>
+										<controlKey>Quiz</controlKey>
+										<controlSrc>PookieBears.Dnn.Dnn_PookieBears_HelloWorld.Controllers/Item/Quiz.mvc</controlSrc>
+										<supportPartialRendering>False</supportPartialRendering>
+										<controlTitle>Quiz</controlTitle>
+										<controlType>View</controlType>
+										<viewOrder>1</viewOrder>
+									</moduleControl>
+									<!-- Edit nézet -->
+									<moduleControl>
+										<controlKey>Edit</controlKey>
+										<controlSrc>PookieBears.Dnn.Dnn_PookieBears_HelloWorld.Controllers/Item/Edit.mvc</controlSrc>
+										<supportPartialRendering>False</supportPartialRendering>
+										<controlTitle>Edit Content</controlTitle>
+										<controlType>Edit</controlType>
+										<viewOrder>2</viewOrder>
+										<supportsPopUps>True</supportsPopUps>
+									</moduleControl>
+									<!-- Settings nézet -->
+									<moduleControl>
+										<controlKey>Settings</controlKey>
+										<controlSrc>PookieBears.Dnn.Dnn_PookieBears_HelloWorld.Controllers/Settings/Settings.mvc</controlSrc>
+										<supportPartialRendering>False</supportPartialRendering>
+										<controlTitle>Dnn_PookieBears_HelloWorld Settings</controlTitle>
+										<controlType>Edit</controlType>
+										<viewOrder>3</viewOrder>
+									</moduleControl>
+								</moduleControls>
+							</moduleDefinition>
+						</moduleDefinitions>
+					</desktopModule>
+				</component>
+
+				<!-- Assembly referenciák a modulhoz -->
+				<component type="Assembly">
+					<assemblies>
+						<assembly>
+							<name>Dnn_PookieBears_HelloWorld.dll</name>
+							<path>bin</path>
+						</assembly>
+					</assemblies>
+				</component>
+
+			</components>
+		</package>
+	</packages>
+</dotnetnuke>

@@ -1,0 +1,11 @@
+C:\DotNetNuke\dnndev\DesktopModules\bin\Dnn_PookieBears_HelloWorld.dll.config
+C:\DotNetNuke\dnndev\DesktopModules\bin\Dnn_PookieBears_HelloWorld.dll
+C:\DotNetNuke\dnndev\DesktopModules\bin\Dnn_PookieBears_HelloWorld.pdb
+C:\DotNetNuke\dnndev\DesktopModules\HelloWorld\module-helloworld\Dnn_PookieBears_HelloWorld\obj\Release\Dnn_PookieBears_HelloWorld.csproj.AssemblyReference.cache
+C:\DotNetNuke\dnndev\DesktopModules\HelloWorld\module-helloworld\Dnn_PookieBears_HelloWorld\obj\Release\PookieBears.Dnn.Dnn_PookieBears_HelloWorld.App_LocalResources.Settings.resources
+C:\DotNetNuke\dnndev\DesktopModules\HelloWorld\module-helloworld\Dnn_PookieBears_HelloWorld\obj\Release\Dnn_PookieBears_HelloWorld.csproj.GenerateResource.cache
+C:\DotNetNuke\dnndev\DesktopModules\HelloWorld\module-helloworld\Dnn_PookieBears_HelloWorld\obj\Release\Dnn_PookieBears_HelloWorld.csproj.CoreCompileInputs.cache
+C:\DotNetNuke\dnndev\DesktopModules\HelloWorld\module-helloworld\Dnn_PookieBears_HelloWorld\obj\Release\Dnn_Pook.510276C4.Up2Date
+C:\DotNetNuke\dnndev\DesktopModules\HelloWorld\module-helloworld\Dnn_PookieBears_HelloWorld\obj\Release\Dnn_PookieBears_HelloWorld.dll
+C:\DotNetNuke\dnndev\DesktopModules\HelloWorld\module-helloworld\Dnn_PookieBears_HelloWorld\obj\Release\Dnn_PookieBears_HelloWorld.pdb
+C:\DotNetNuke\dnndev\DesktopModules\bin\Resources\possible_battle filters.csv

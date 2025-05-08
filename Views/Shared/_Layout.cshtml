@@ -1,0 +1,298 @@
+﻿@using System
+@using System.IO
+@using System.Web.Hosting
+@using System.Collections.Generic
+@using Newtonsoft.Json
+@inherits DotNetNuke.Web.Mvc.Framework.DnnWebViewPage
+@using DotNetNuke.Web.Mvc.Helpers
+
+@{
+    Layout = null;
+
+    // 1) CSV beolvasása
+    string csvPath = HostingEnvironment.MapPath(
+        "~/DesktopModules/HelloWorld/module-helloworld/Dnn_PookieBears_HelloWorld/Resources/possible_battle filters.csv"
+    );
+    string[] allLines = File.ReadAllLines(csvPath);
+
+    // 2) Delimiter eldöntése
+    char[] delim = allLines[0].IndexOf(',') >= 0
+        ? new[] { ',' }
+        : new[] { ';' };
+
+    // 3) Rekordlista építése
+    var combosList = new List<string[]>();
+    for (int i = 1; i < allLines.Length; i++)
+    {
+        string line = allLines[i];
+        if (String.IsNullOrWhiteSpace(line)) { continue; }
+        string[] cols = line.Split(delim);
+        if (cols.Length < 6) { continue; }
+        combosList.Add(cols);
+    }
+
+    // 4) Egyedi korszakok kigyűjtése
+    var erasList = new List<string>();
+    for (int i = 0; i < combosList.Count; i++)
+    {
+        string era = combosList[i][0];
+        if (era.Equals("fiktivet", StringComparison.OrdinalIgnoreCase))
+        {
+            continue;
+        }
+        bool exists = false;
+        for (int j = 0; j < erasList.Count; j++)
+        {
+            if (erasList[j] == era)
+            {
+                exists = true;
+                break;
+            }
+        }
+        if (!exists)
+        {
+            erasList.Add(era);
+        }
+    }
+    string[] eras = erasList.ToArray();
+
+    // 5) JSON exportálása a JS-nek
+    string combosJson = JsonConvert.SerializeObject(combosList);
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Szűrés és képmegjelenítés</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2em;
+            background: #f9f9f9;
+        }
+
+        .step {
+            max-width: 600px;
+            margin: 2em auto;
+            text-align: left;
+        }
+
+            .step:not(.active) {
+                display: none;
+            }
+
+        .option-btn {
+            display: inline-block;
+            background: #fff;
+            border: 2px solid #007bff;
+            color: #007bff;
+            border-radius: 8px;
+            padding: .75em 1.5em;
+            margin: .5em;
+            cursor: pointer;
+            transition: .2s;
+        }
+
+            .option-btn:hover, .option-btn.selected {
+                background: #007bff;
+                color: #fff;
+            }
+
+        .actions {
+            text-align: center;
+            margin-top: 1.5em;
+        }
+
+            .actions button {
+                padding: .75em 1.5em;
+                border: none;
+                background: #007bff;
+                color: #fff;
+                border-radius: 6px;
+                cursor: pointer;
+                font-size: 1em;
+                margin: 0 .5em;
+            }
+
+                .actions button:hover {
+                    background: #0056b3;
+                }
+
+        #resultInfo {
+            margin-top: 1em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="wizardContainer">
+        <div class="step active" data-step="0">
+            <h3>1. Válaszd ki a korszakot:</h3>
+            @if (eras.Length == 0)
+            {
+                <p><em>Hiba: nincs elérhető korszak!</em></p>
+            }
+            else
+            {
+                for (int i = 0; i < eras.Length; i++)
+                {
+                    <button type="button" class="option-btn" data-value="@eras[i]">
+                        @eras[i]
+                    </button>
+                }
+            }
+        </div>
+        <div class="step" data-step="1">
+            <h3>2. Válaszd ki a konfliktust:</h3>
+            <div id="conflictOptions"></div>
+        </div>
+        <div class="step" data-step="2">
+            <h3>3. Válaszd ki a terepet:</h3>
+            <div id="terrainOptions"></div>
+            <div class="actions">
+                <button type="button" id="finish">Megjelenítés</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var combos  = @Html.Raw(combosJson),
+            steps   = document.querySelectorAll(".step"),
+            answers = {},
+            // EZ legyen a TE struktúrád szerinti útvonal:
+            imgBase = '@Url.Content("~/DesktopModules/HelloWorld/module-helloworld/Dnn_PookieBears_HelloWorld/Images/")';
+
+        function showStep(idx) {
+            steps.forEach(s => s.classList.remove("active"));
+            steps[idx].classList.add("active");
+        }
+
+        // 1) Korszak
+        var eraBtns = steps[0].querySelectorAll(".option-btn");
+        eraBtns.forEach(function(btn) {
+            btn.addEventListener("click", function() {
+                eraBtns.forEach(b => b.classList.remove("selected"));
+                this.classList.add("selected");
+                answers.era = this.dataset.value;
+
+                // Konfliktusok
+                var conflicts = [];
+                combos.forEach(function(r) {
+                    var c = r[1];
+                    if (r[0] === answers.era && c.toLowerCase() !== "fiktivet" && conflicts.indexOf(c) < 0) {
+                        conflicts.push(c);
+                    }
+                });
+                var cDiv = document.getElementById("conflictOptions");
+                cDiv.innerHTML = "";
+                conflicts.forEach(function(c) {
+                    var b = document.createElement("button");
+                    b.className = "option-btn";
+                    b.textContent = c;
+                    b.dataset.value = c;
+                    cDiv.appendChild(b);
+                });
+                showStep(1);
+
+                // 2) Konfliktus választás
+                var confBtns = cDiv.querySelectorAll(".option-btn");
+                confBtns.forEach(function(cb) {
+                    cb.addEventListener("click", function() {
+                        confBtns.forEach(b => b.classList.remove("selected"));
+                        this.classList.add("selected");
+                        answers.conflict = this.dataset.value;
+
+                        // Terepek
+                        var terrains = [];
+                        combos.forEach(function(r) {
+                            var t = r[2];
+                            if (r[0]===answers.era && r[1]===answers.conflict && t.toLowerCase()!=="fiktivet" && terrains.indexOf(t)<0) {
+                                terrains.push(t);
+                            }
+                        });
+                        var tDiv = document.getElementById("terrainOptions");
+                        tDiv.innerHTML = "";
+                        terrains.forEach(function(t) {
+                            var tb = document.createElement("button");
+                            tb.className = "option-btn";
+                            tb.textContent = t;
+                            tb.dataset.value = t;
+                            tDiv.appendChild(tb);
+                        });
+                        showStep(2);
+
+                        // 3) Terep választás
+                        var terBtns = tDiv.querySelectorAll(".option-btn");
+                        terBtns.forEach(function(tb) {
+                            tb.addEventListener("click", function() {
+                                terBtns.forEach(b => b.classList.remove("selected"));
+                                this.classList.add("selected");
+                                answers.terrain = this.dataset.value;
+                            });
+                        });
+                    });
+                });
+            });
+        });
+
+        // 4) Megjelenítés
+        document.getElementById("finish").addEventListener("click", function() {
+            if (!answers.terrain) {
+                alert("Kérlek, válassz terepet!");
+                return;
+            }
+            // Rekord kikeresés
+            var match = null;
+            for (var i = 0; i < combos.length; i++) {
+                if (combos[i][0]===answers.era && combos[i][1]===answers.conflict && combos[i][2]===answers.terrain) {
+                    match = combos[i]; break;
+                }
+            }
+            if (!match || !match[5]) {
+                alert("Nincs kép ehhez a kombinációhoz!"); return;
+            }
+
+            // URL építése almappa+fájlnév
+            var folder   = answers.terrain,
+                key      = match[5].split("|").join("_"),
+                fileName = key + ".png",
+                imgUrl   = imgBase
+                         + encodeURIComponent(folder) + "/"
+                         + encodeURIComponent(fileName);
+
+            var container = document.getElementById("wizardContainer");
+            container.innerHTML = "";
+
+            // Kép
+            var img = document.createElement("img");
+            img.src = imgUrl; img.alt = key; img.style.maxWidth = "100%";
+            container.appendChild(img);
+
+            // Infó
+            var info = document.createElement("div");
+            info.id = "resultInfo";
+            info.textContent = "Kiválasztott: "
+                + answers.era + " / "
+                + answers.conflict + " / "
+                + answers.terrain;
+            container.appendChild(info);
+
+            // Vissza
+            var btnBack = document.createElement("button");
+            btnBack.className = "option-btn";
+            btnBack.textContent = "Vissza";
+            btnBack.addEventListener("click", ()=> location.reload());
+            container.appendChild(btnBack);
+
+            // Kosárba
+            var btnCart = document.createElement("button");
+            btnCart.className = "option-btn";
+            btnCart.textContent = "Kosárba adás";
+            container.appendChild(btnCart);
+        });
+    });
+    </script>
+</body>
+</html>

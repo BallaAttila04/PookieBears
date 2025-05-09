@@ -1,0 +1,50 @@
+C:\Users\tomir\source\repos\HotcakesProductViewer\HotcakesProductViewer\bin\Debug\HotcakesProductViewer.exe.config
+C:\Users\tomir\source\repos\HotcakesProductViewer\HotcakesProductViewer\bin\Debug\HotcakesProductViewer.exe
+C:\Users\tomir\source\repos\HotcakesProductViewer\HotcakesProductViewer\bin\Debug\HotcakesProductViewer.pdb
+C:\Users\tomir\source\repos\HotcakesProductViewer\HotcakesProductViewer\bin\Debug\Hotcakes.CommerceDTO.dll
+C:\Users\tomir\source\repos\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\HotcakesProductViewer.csproj.AssemblyReference.cache
+C:\Users\tomir\source\repos\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\HotcakesProductViewer.Form1.resources
+C:\Users\tomir\source\repos\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\HotcakesProductViewer.Properties.Resources.resources
+C:\Users\tomir\source\repos\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\HotcakesProductViewer.csproj.GenerateResource.cache
+C:\Users\tomir\source\repos\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\HotcakesProductViewer.csproj.CoreCompileInputs.cache
+C:\Users\tomir\source\repos\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\Hotcakes.F95E3B5D.Up2Date
+C:\Users\tomir\source\repos\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\HotcakesProductViewer.exe
+C:\Users\tomir\source\repos\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\HotcakesProductViewer.pdb
+C:\Users\tomir\source\repos\HotcakesProductViewer\HotcakesProductViewer\bin\Debug\Hotcakes.Web.dll
+C:\Users\tomir\OneDrive - Corvinus University of Budapest\makett mester scraping\HotcakesProductViewer\HotcakesProductViewer\bin\Debug\HotcakesProductViewer.exe.config
+C:\Users\tomir\OneDrive - Corvinus University of Budapest\makett mester scraping\HotcakesProductViewer\HotcakesProductViewer\bin\Debug\HotcakesProductViewer.exe
+C:\Users\tomir\OneDrive - Corvinus University of Budapest\makett mester scraping\HotcakesProductViewer\HotcakesProductViewer\bin\Debug\HotcakesProductViewer.pdb
+C:\Users\tomir\OneDrive - Corvinus University of Budapest\makett mester scraping\HotcakesProductViewer\HotcakesProductViewer\bin\Debug\Hotcakes.CommerceDTO.dll
+C:\Users\tomir\OneDrive - Corvinus University of Budapest\makett mester scraping\HotcakesProductViewer\HotcakesProductViewer\bin\Debug\Hotcakes.Web.dll
+C:\Users\tomir\OneDrive - Corvinus University of Budapest\makett mester scraping\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\HotcakesProductViewer.csproj.AssemblyReference.cache
+C:\Users\tomir\OneDrive - Corvinus University of Budapest\makett mester scraping\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\HotcakesProductViewer.Form1.resources
+C:\Users\tomir\OneDrive - Corvinus University of Budapest\makett mester scraping\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\HotcakesProductViewer.Properties.Resources.resources
+C:\Users\tomir\OneDrive - Corvinus University of Budapest\makett mester scraping\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\HotcakesProductViewer.csproj.GenerateResource.cache
+C:\Users\tomir\OneDrive - Corvinus University of Budapest\makett mester scraping\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\HotcakesProductViewer.csproj.CoreCompileInputs.cache
+C:\Users\tomir\OneDrive - Corvinus University of Budapest\makett mester scraping\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\Hotcakes.F95E3B5D.Up2Date
+C:\Users\tomir\OneDrive - Corvinus University of Budapest\makett mester scraping\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\HotcakesProductViewer.exe
+C:\Users\tomir\OneDrive - Corvinus University of Budapest\makett mester scraping\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\HotcakesProductViewer.pdb
+C:\Users\Rendszerfejlesztes\source\repos\HotcakesProductViewer\HotcakesProductViewer\bin\Debug\HotcakesProductViewer.exe.config
+C:\Users\Rendszerfejlesztes\source\repos\HotcakesProductViewer\HotcakesProductViewer\bin\Debug\HotcakesProductViewer.exe
+C:\Users\Rendszerfejlesztes\source\repos\HotcakesProductViewer\HotcakesProductViewer\bin\Debug\HotcakesProductViewer.pdb
+C:\Users\Rendszerfejlesztes\source\repos\HotcakesProductViewer\HotcakesProductViewer\bin\Debug\Hotcakes.CommerceDTO.dll
+C:\Users\Rendszerfejlesztes\source\repos\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\HotcakesProductViewer.csproj.AssemblyReference.cache
+C:\Users\Rendszerfejlesztes\source\repos\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\HotcakesProductViewer.Form1.resources
+C:\Users\Rendszerfejlesztes\source\repos\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\HotcakesProductViewer.Properties.Resources.resources
+C:\Users\Rendszerfejlesztes\source\repos\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\HotcakesProductViewer.csproj.GenerateResource.cache
+C:\Users\Rendszerfejlesztes\source\repos\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\HotcakesProductViewer.csproj.CoreCompileInputs.cache
+C:\Users\Rendszerfejlesztes\source\repos\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\Hotcakes.F95E3B5D.Up2Date
+C:\Users\Rendszerfejlesztes\source\repos\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\HotcakesProductViewer.exe
+C:\Users\Rendszerfejlesztes\source\repos\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\HotcakesProductViewer.pdb
+C:\Users\Hp\Downloads\HotcakesProductViewer-20250509T102205Z-001\HotcakesProductViewer\HotcakesProductViewer\bin\Debug\HotcakesProductViewer.exe.config
+C:\Users\Hp\Downloads\HotcakesProductViewer-20250509T102205Z-001\HotcakesProductViewer\HotcakesProductViewer\bin\Debug\HotcakesProductViewer.exe
+C:\Users\Hp\Downloads\HotcakesProductViewer-20250509T102205Z-001\HotcakesProductViewer\HotcakesProductViewer\bin\Debug\HotcakesProductViewer.pdb
+C:\Users\Hp\Downloads\HotcakesProductViewer-20250509T102205Z-001\HotcakesProductViewer\HotcakesProductViewer\bin\Debug\Hotcakes.CommerceDTO.dll
+C:\Users\Hp\Downloads\HotcakesProductViewer-20250509T102205Z-001\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\HotcakesProductViewer.csproj.AssemblyReference.cache
+C:\Users\Hp\Downloads\HotcakesProductViewer-20250509T102205Z-001\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\HotcakesProductViewer.Form1.resources
+C:\Users\Hp\Downloads\HotcakesProductViewer-20250509T102205Z-001\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\HotcakesProductViewer.Properties.Resources.resources
+C:\Users\Hp\Downloads\HotcakesProductViewer-20250509T102205Z-001\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\HotcakesProductViewer.csproj.GenerateResource.cache
+C:\Users\Hp\Downloads\HotcakesProductViewer-20250509T102205Z-001\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\HotcakesProductViewer.csproj.CoreCompileInputs.cache
+C:\Users\Hp\Downloads\HotcakesProductViewer-20250509T102205Z-001\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\Hotcakes.F95E3B5D.Up2Date
+C:\Users\Hp\Downloads\HotcakesProductViewer-20250509T102205Z-001\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\HotcakesProductViewer.exe
+C:\Users\Hp\Downloads\HotcakesProductViewer-20250509T102205Z-001\HotcakesProductViewer\HotcakesProductViewer\obj\Debug\HotcakesProductViewer.pdb

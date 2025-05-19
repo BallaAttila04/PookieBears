@@ -197,7 +197,7 @@ namespace HotcakesProductViewer // Vagy a te projekted névtér neve
           AND PropertyValue NOT LIKE '%(Fiktív)%' AND PropertyValue NOT LIKE '%(Civil)%'
     )
     SELECT
-         TOP 100
+         TOP 50
         a.bvin,
         a.SKU,
         b.Title AS ProductName,

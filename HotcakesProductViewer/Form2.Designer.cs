@@ -87,7 +87,7 @@
             // 
             this.btnApplyTerrainFilter.Location = new System.Drawing.Point(12, 337);
             this.btnApplyTerrainFilter.Name = "btnApplyTerrainFilter";
-            this.btnApplyTerrainFilter.Size = new System.Drawing.Size(75, 23);
+            this.btnApplyTerrainFilter.Size = new System.Drawing.Size(107, 23);
             this.btnApplyTerrainFilter.TabIndex = 2;
             this.btnApplyTerrainFilter.Text = "Gráf betöltése";
             this.btnApplyTerrainFilter.UseVisualStyleBackColor = true;
